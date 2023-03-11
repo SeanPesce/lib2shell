@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <process.h>
 
-#define SHELL "C:\\Windows\\System32\\cmd.exe"
+#define SHELL_COMMAND "C:\\Windows\\System32\\cmd.exe"
 
 BOOL APIENTRY DllMain(HMODULE h_module, DWORD  ul_reason_for_call, LPVOID lp_reserved)
 {
@@ -15,8 +15,8 @@ BOOL APIENTRY DllMain(HMODULE h_module, DWORD  ul_reason_for_call, LPVOID lp_res
     {
     case DLL_PROCESS_ATTACH:
         puts("[lib2shell by SeanP]");
-        printf("Starting %s\n", SHELL);
-        err = _execl(SHELL, "C:\\Windows\\System32\\cmd.exe", "/c", SHELL, NULL);
+        printf("Starting %s\n", SHELL_COMMAND);
+        err = _execl(SHELL_COMMAND, "C:\\Windows\\System32\\cmd.exe", "/c", SHELL_COMMAND, NULL);
         printf("Result: %lld\n", err);
         break;
     case DLL_THREAD_ATTACH:
