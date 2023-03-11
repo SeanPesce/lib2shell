@@ -8,6 +8,8 @@ Shared library implementations that transform the containing process into a shel
 
 ## Usage  
 
+**([Many examples on GTFOBins](https://gtfobins.github.io/#+library%20load))**  
+
 Examples for Unix operating systems:  
 
 ```
@@ -17,8 +19,6 @@ ssh-keygen -D ./lib2shell.so
 ```
 openssl req -engine ./lib2shell.so
 ```
-
-([Other examples](https://gtfobins.github.io/#+library%20load))
 
 
 Examples on Windows:  
